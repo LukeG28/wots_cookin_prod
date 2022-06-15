@@ -33,3 +33,4 @@ bokeh
 streamlit_bokeh_events
 pydub
 google-cloud-speech
+nltk
