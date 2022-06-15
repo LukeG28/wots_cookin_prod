@@ -7,10 +7,16 @@ from streamlit_bokeh_events import streamlit_bokeh_events
 from pydub import AudioSegment
 from wots_cookin.google_api import speech_to_text, config
 from google.cloud import speech_v1 as speech
+from google.oauth2 import service_account
 from wots_cookin.data import load_full_stopwords, remove_stopwords_from_list
 from wots_cookin.word2vec_trainer import Trainer
 from wots_cookin.shortlist import *
 from wots_cookin.display import print_details
+
+# Create GCP client
+credentials = service_account.Credentials.from_service_account_info(
+    st.secrets["gcp_service_account"]
+)
 
 # Load clean dataframe of recipes
 df = pd.read_pickle("ref_data/enriched_recipes.pkl")
