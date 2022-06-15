@@ -7,3 +7,4 @@ raw_data/
 .env
 test_code/
 audio_files/*.flac
+*.zip
