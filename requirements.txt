@@ -8,6 +8,7 @@ wheel>=0.29
 numpy
 pandas
 gensim
+nltk
 
 # tests/linter
 black
@@ -33,4 +34,3 @@ bokeh
 streamlit_bokeh_events
 pydub
 google-cloud-speech
-nltk
